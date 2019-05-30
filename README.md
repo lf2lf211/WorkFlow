@@ -10,8 +10,17 @@
 
 ## Git flow
 先來介紹Git flow，他是最早誕生也是最早被廣泛使用的工作流程。<br>
-分為主分支**Master**以及開發分支**Develop**。<br><br>
+它的特點是專案中會有兩個長期存在的分支。<br>
+分別為主分支**Master**以及開發分支**Develop**。<br><br>
+主分支用於存放對外發布的版本，在這裡的版本都是穩定的版本；而開發分支則是存放最新的開發版本。<br>
 
+
+再來，還會有三種短期分支。都是開發完被merge進develop或master就會被刪除的分支。<br><br>
+
+* 功能分支（feature branch）
+* 補丁分支（hotfix branch）
+* 預發分支（release branch）
+<br>
 一、主分支Master<br>
 
 首先，代碼庫會有一個且只有一個主分支。所有正式上線的版本，都是使用主分支版本。<br>
