@@ -38,6 +38,10 @@ Git主分支的名字，默認叫做Master。專案一開起就會自動建立�
 ![](https://imgur.com/nALludX.png)<br>
 * 使用--no-ff參數<br>
 ![](https://imgur.com/FUG9L1a.png)<br>
+* Git Flow 示意图<br>
+![](https://imgur.com/yjhAIgK.jpg)<br>
+
+
 
 
 
