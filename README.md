@@ -38,12 +38,13 @@ Git主分支的名字，默認叫做Master。專案一開起就會自動建立�
 ![](https://imgur.com/nALludX.png)<br>
 * 使用--no-ff參數<br>
 ![](https://imgur.com/FUG9L1a.png)<br>
-* Git Flow 示意图<br>
+* Git Flow 示意圖<br>
 ![](https://imgur.com/yjhAIgK.jpg)<br>
 
-
-
-
+* feature branch示意圖<br>
+![](https://imgur.com/O6E22LL.jpg)<br>
+* hotfix branch示意圖<br>
+![](https://imgur.com/CYHQiTX.jpg)<br>
 
 Git flow的优点是清晰可控，缺点是相对复杂，需要同时维护两个长期分支。大多数工具都将master当作默认分支，可是开发是在develop分支进行的，这导致经常要切换分支，非常烦人。
 更大问题在于，这个模式是基于"版本发布"的，目标是一段时间以后产出一个新版本。但是，很多网站项目是"持续发布"，代码一有变动，就部署一次。这时，master分支和develop分支的差别不大，没必要维护两个长期分支。
