@@ -18,7 +18,9 @@
 * 功能分支（feature branch）
 * 修復分支（hotfix branch）
 * 預發分支（release branch）
+
 <br><br>
+
 **一、主分支Master**<br><br>
 
 首先，代碼庫會有一個且只有一個主分支。所有正式上線的版本，都是使用主分支版本。<br>
