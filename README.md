@@ -16,7 +16,7 @@
 再來，還會有三種短期分支。都是開發完被merge進develop或master就會被刪除的分支。<br><br>
 
 * 功能分支（feature branch）
-* 補丁分支（hotfix branch）
+* 修復分支（hotfix branch）
 * 預發分支（release branch）
 <br>
 一、主分支Master<br>
@@ -39,6 +39,10 @@ Git主分支的名字，默認叫做Master。專案一開起就會自動建立�
 * 使用--no-ff參數<br>
 ![](https://imgur.com/FUG9L1a.png)<br>
 
+
+
+Git flow的优点是清晰可控，缺点是相对复杂，需要同时维护两个长期分支。大多数工具都将master当作默认分支，可是开发是在develop分支进行的，这导致经常要切换分支，非常烦人。
+更大问题在于，这个模式是基于"版本发布"的，目标是一段时间以后产出一个新版本。但是，很多网站项目是"持续发布"，代码一有变动，就部署一次。这时，master分支和develop分支的差别不大，没必要维护两个长期分支。
 
 参考链接：
 <a href="http://www.ruanyifeng.com/blog/2012/07/git.html">阮一峰-Git分支管理策略</a>、<a href="http://www.ruanyifeng.com/blog/2015/12/git-workflow.html">阮一峰- Git 工作流程</a>
