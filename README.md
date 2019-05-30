@@ -69,6 +69,8 @@ release分支是從Develop分支分出來的，在預發布結束以後，必須
 * Git Flow 示意圖<br>
 ![](https://imgur.com/yjhAIgK.jpg)<br>
 
+图中画了 Git Flow 的五种分支，master，develop，feature branchs ,release branchs , hoxfixes，其中 master 和 develop 字体被加粗代表主要分支。master 分支每合并一个分支，无论是 hotfix 还是 release ,都会打一个版本标签。通过箭头可以清楚的看到分支的开始和结束走向，例如 feature 分支从 develop 开始，最终合并回 develop ，hoxfixes 从 master 检出创建，最后合并回 develop 和 master，master 也打上了标签。
+
 
 Git flow的优点是清晰可控，缺点是相对复杂，需要同时维护两个长期分支。大多数工具都将master当作默认分支，可是开发是在develop分支进行的，这导致经常要切换分支，非常烦人。
 更大问题在于，这个模式是基于"版本发布"的，目标是一段时间以后产出一个新版本。但是，很多网站项目是"持续发布"，代码一有变动，就部署一次。这时，master分支和develop分支的差别不大，没必要维护两个长期分支。
