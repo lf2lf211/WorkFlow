@@ -18,16 +18,16 @@
 * 功能分支（feature branch）
 * 修復分支（hotfix branch）
 * 預發分支（release branch）
-<br>
-一、主分支Master<br>
+<br><br>
+**一、主分支Master**<br><br>
 
 首先，代碼庫會有一個且只有一個主分支。所有正式上線的版本，都是使用主分支版本。<br>
 Git主分支的名字，默認叫做Master。專案一開起就會自動建立，版本庫初始化以後，默認在主分支進行開發。<br>
 由於主分支要保持軟體穩定運行，主分支只用來發布重要版本，平時的開發版本則應該在另一條分支上進行，直到開發進展到可以發布程度才會與主分支合併。<br><br>
 
-![](https://imgur.com/rw5NlMY.png)<br>
+![](https://imgur.com/rw5NlMY.png)<br><br>
 
-二、開發分支Develop<br>
+**二、開發分支Develop**<br><br>
 此分支用來存放最新開發版本的代碼，是開發過程中代碼中心分支。如要正式對外發布則對主分支merge。<br>
 以develop分支為起點新建feature分支，在feature 分支中進行新功能的開發或者代碼的修正，在合併回Develop分支。<br>
 develop分支維會持續成為開發過程工的最新代碼，以便開發人員創建feature分支進行自己的工作。<br><br>
@@ -41,20 +41,19 @@ develop分支維會持續成為開發過程工的最新代碼，以便開發人�
 * 使用--no-ff參數<br>
 ![](https://imgur.com/FUG9L1a.png)<br>
 
-三、功能分支feature<br>
-
-為了某工功能而開發的分支，從Develop分支拉出來當feature分支，開發完成後要再併入Develop分支。是開發者直接更改代碼發送提交的分支。
-功能分支的名字，通常用feature-\*的形式命名。
+**三、功能分支feature**<br><br>
+功能分支的名字，通常用feature-\*的形式命名。<br>
+為了某工功能而開發的分支，從Develop分支拉出來當feature分支，開發完成後要再併入Develop分支。是開發者直接更改代碼發送提交的分支。<br>
 
 
 * feature branch示意圖<br>
 ![](https://imgur.com/O6E22LL.jpg)<br>
-四、修復分支hotfix<br>
+**四、修復分支hotfix**<br><br>
 
 * hotfix branch示意圖<br>
 ![](https://imgur.com/CYHQiTX.jpg)<br>
 
-五、預發分支release<br>
+**五、預發分支release**<br><br>
 
 
 
