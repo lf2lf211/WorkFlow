@@ -13,7 +13,7 @@
 它的特點是專案中會有兩個長期存在的分支，且絕對不會被刪除。分別為主分支**Master**以及開發分支**Develop**。
 主分支用於存放對外發布的版本，在這裡的版本都是穩定的版本；而開發分支則是存放最新的開發版本。<br>
 
-再來，還會有三種短期分支。都是開發完被merge進develop或master就會被刪除的分支。<br><br>
+再來，還會有三種短期(臨時性)分支。都是開發完被merge進develop或master就會被刪除的分支。<br><br>
 
 * 功能分支（feature branch）
 * 修復分支（hotfix branch）
@@ -42,6 +42,11 @@ develop分支維會持續成為開發過程工的最新代碼，以便開發人�
 ![](https://imgur.com/FUG9L1a.png)<br>
 
 三、功能分支feature<br>
+
+為了某工功能而開發的分支，從Develop分支拉出來當feature分支，開發完成後要再併入Develop分支。是開發者直接更改代碼發送提交的分支。
+功能分支的名字，通常用feature-\*的形式命名。
+
+
 * feature branch示意圖<br>
 ![](https://imgur.com/O6E22LL.jpg)<br>
 四、修復分支hotfix<br>
