@@ -51,14 +51,19 @@ develop分支維會持續成為開發過程工的最新代碼，以便開發人�
 * feature branch示意圖<br>
 ![](https://imgur.com/O6E22LL.jpg)<br>
 **四、修復分支hotfix**<br><br>
+hotfix分支的名字通常用fixbug-\*的形式命名。<br>
+hotfix分支是從Master分支分出來的，Master分支分支發布以後如有bug需要修復，這時就需要創建一個分支進行bug修復，修復結束後再合併進Master和Develop分支，最後删除hotfix分支。<br>
+
+
 
 * hotfix branch示意圖<br>
 ![](https://imgur.com/CYHQiTX.jpg)<br>
 
 **五、預發分支release**<br><br>
-
-
-
+release分支的名字通常用release-\*的形式命名。<br>
+release分支是指合并到Master分支之前，需要進行版本測試而產生出來的分支。<br>
+在release分支裡，只處理與發布前相關的提交，該分支絕對不能包含需求變更或者功能變更等重大修正。<br>
+release分支是從Develop分支分出來的，在預發布結束以後，必須合併進Develop和Master分支，最後刪除release分支。<br>
 
 
 * Git Flow 示意圖<br>
