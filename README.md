@@ -76,13 +76,19 @@ Git flow的优点是清晰可控，缺点是相对复杂，需要同时维护两
 更大问题在于，这个模式是基于"版本发布"的，目标是一段时间以后产出一个新版本。但是，很多网站项目是"持续发布"，代码一有变动，就部署一次。这时，master分支和develop分支的差别不大，没必要维护两个长期分支。
 
 
-##GitHub Flow<br>
+## GitHub Flow<br>
 
-![](https://cdn-images-1.medium.com/max/1600/1*JmRIFXZGsv6tx5t9yNg7Xg.png)<br>
+![](https://imgur.com/uDjn6I1.png)<br>
 
 使用Github Flow 的前提條件<br>
 適合15-20人左右團隊，在部署上自動化且一天之類需要多次部署的開發。
 <br><br><br>
+
+github比git有多兩個服務，一個是fork，另一個是pull request（簡稱PR）;
+先有一個共有的遠端倉庫(remote repository)，
+然後各自用fork把遠端倉庫fork回到自己的倉庫。開發好後，再利用PR回去共有的遠端倉庫，審核過後merge進master。
+
+
 整個 GitHub Flow 是基於分支，它是 Git 的一個核心概念。最主要就是令master 分支時常保持可以部署的狀態。進行新的作業時要從master 分支創建新的分支，分支命名應該具有描述性（如 userInfo、getAllUser......等等），讓其他人清楚知道分支正在進行的工作項目。
 在branch已經準備merging時，創建Pull Request，以Pull Request 進行交流，確認作業完成後與master分支進行合併（合併的代碼一定要測試
 與master分支合併後，立刻部署。
@@ -93,12 +99,12 @@ Git flow的优点是清晰可控，缺点是相对复杂，需要同时维护两
 * 發起Pull Request<br>
 使任何人都能清楚看到，什麼樣的提交內容將會被合併（Merge）。在開發過程中都可以發起一個 Pull Request，像是：當你卡住了，需要幫助或是建議時；當你準備好讓某人來檢閱你的工作項目時。在 Pull Request 的訊息中使用 @ 來請求人以及團隊的反饋。<br>
 
-發起Pull Request 後，檢閱人或團隊可以提出問題或是意見。也許是代碼不符合規範，或是有更好寫法，又或者是一切都良好。Pull Request 鼓勵這類型的討論。<br>
+* 發起Pull Request 後，檢閱人或團隊可以提出問題或是意見。也許是代碼不符合規範，或是有更好寫法，又或者是一切都良好。Pull Request 鼓勵這類型的討論。<br>
 
-在討論及回饋中，如果有進需要進修改的內容，在分支中修正它並繼續推送修改。GitHub 會在 Pull Request 頁面顯示新提交以及新的回饋。<br>
+* 在討論及回饋中，如果有進需要進修改的內容，在分支中修正它並繼續推送修改。GitHub 會在 Pull Request 頁面顯示新提交以及新的回饋。<br>
 
 
-在團隊檢核過提交內容後,就可以開始進行合併以及部屬。合併後，Pull Request 保存了當時的修改歷史記錄以及回饋。可以讓任開發人回頭檢視當初情況。<br>
+* 在團隊檢核過提交內容後,就可以開始進行合併以及部屬。合併後，Pull Request 保存了當時的修改歷史記錄以及回饋。可以讓任開發人回頭檢視當初情況。<br>
 
 
 
