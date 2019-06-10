@@ -110,3 +110,4 @@ github比git有多兩個服務，一個是fork，另一個是pull request（簡�
 
 参考链接：
 <a href="http://www.ruanyifeng.com/blog/2012/07/git.html">阮一峰-Git分支管理策略</a>、<a href="http://www.ruanyifeng.com/blog/2015/12/git-workflow.html">阮一峰- Git 工作流程</a>
+<a href="https://medium.com/@trylovetom/%E8%AE%93%E6%88%91%E5%80%91%E4%BE%86%E4%BA%86%E8%A7%A3-github-flow-%E5%90%A7-4144caf1f1bf">MrGG-讓我們來了解 GitHub Flow 吧！</a>
