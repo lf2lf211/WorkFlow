@@ -103,6 +103,9 @@ github比git有多兩個服務，一個是fork，另一個是pull request（簡�
 
 
 ## issue tracking <br>
+
+![](https://imgur.com/pPOHqDm.png)<br>
+
 開發時，可以給專案標記issue，還有其他不同標籤，還優化專案。當提交的時候，如果提交訊息中有fix #1 等，可以自動對應到相關編號的issue。
 
 
