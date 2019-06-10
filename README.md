@@ -75,35 +75,35 @@ release分支是從Develop分支分出來的，在預發布結束以後，必須
 ## GitHub Flow<br>
 
 
-使用Github Flow 的前提條件<br>
+建議使用Github Flow的情況 <br>
 適合15-20人左右團隊，在部署上自動化且一天之類需要多次部署的開發。
 <br><br><br>
 
-github比git有多兩個服務，一個是fork，另一個是pull request（簡稱PR）,;
-先有一個共有的遠端倉庫(remote repository)，
-然後各自用fork把遠端倉庫fork回到自己的倉庫。開發好後，再利用PR回去共有的遠端倉庫，審核過後merge進master。
-** 示意圖 **
+github比git有多兩個服務，一個是fork，另一個是pull request（簡稱PR），還新增issue tracking用法;
+先有一個共有的遠端倉庫(remote repository)，然後各自用fork把遠端倉庫fork回到自己的倉庫。開發好後，再利用PR回去共有的遠端倉庫，審核過後merge進master。
+* 示意圖 <br>
 ![](https://imgur.com/uDjn6I1.png)<br>
 
 
-整個 GitHub Flow 是基於分支，它是 Git 的一個核心概念。最主要就是令master 分支時常保持可以部署的狀態。進行新的作業時要從master 分支創建新的分支，分支命名應該具有描述性（如 userInfo、getAllUser......等等），讓其他人清楚知道分支正在進行的工作項目。
-在branch已經準備merging時，創建Pull Request，以Pull Request 進行交流，確認作業完成後與master分支進行合併（合併的代碼一定要測試
-與master分支合併後，立刻部署。
+整個 GitHub Flow 是基於分支，它是 Git 的一個核心概念。最主要就是令master 分支時常保持可以部署的狀態。進行新的作業時要從master 分支創建新的分支，分支命名應該具有描述性（如 userInfo、getAllUser......等等），讓其他人清楚知道分支正在進行的工作項目。<br>
 
-* 從master分支拉出新分支,修改且提交(Commits)<br>
+在branch已經準備merging時，創建Pull Request，以Pull Request 進行交流，確認作業完成後與master分支進行合併，合併的代碼一定要測試
+與master分支合併後，立刻部署。<br>
+
+* 從master分支拉出新分支,修改且提交(Commits)<br><br>
 分支建立後，開始進行修改。無論新增、修改或刪除檔案，都會提交更新並將它們加入分支。該過程可以使你追蹤分支的工作進度。<br>
 提交動作也會產生工作記錄，讓其他開發者可以了解你做了些什麼。每個提交都要有相關的提交訊息(Commits Message)，解釋此次提交內容。另外，這樣也使每個提交都是一個個體，使我們在找到錯誤時可以恢復修改。<br>
-* 發起Pull Request<br>
+* 發起Pull Request<br><br>
 使任何人都能清楚看到，什麼樣的提交內容將會被合併（Merge）。在開發過程中都可以發起一個 Pull Request，像是：當你卡住了，需要幫助或是建議時；當你準備好讓某人來檢閱你的工作項目時。在 Pull Request 的訊息中使用 @ 來請求人以及團隊的反饋。<br>
 
-* 發起Pull Request 後，檢閱人或團隊可以提出問題或是意見。也許是代碼不符合規範，或是有更好寫法，又或者是一切都良好。Pull Request 鼓勵這類型的討論。<br>
+* 發起Pull Request 後，檢閱人或團隊可以提出問題或是意見。也許是代碼不符合規範，或是有更好寫法，又或者是一切都良好。Pull Request 鼓勵這類型的討論。<br><br>
 
-* 在討論及回饋中，如果有進需要進修改的內容，在分支中修正它並繼續推送修改。GitHub 會在 Pull Request 頁面顯示新提交以及新的回饋。<br>
+* 在討論及回饋中，如果有進需要進修改的內容，在分支中修正它並繼續推送修改。GitHub 會在 Pull Request 頁面顯示新提交以及新的回饋。<br><br>
 
-* 在團隊檢核過提交內容後,就可以開始進行合併以及部屬。合併後，Pull Request 保存了當時的修改歷史記錄以及回饋。可以讓任開發人回頭檢視當初情況。<br>
+* 在團隊檢核過提交內容後,就可以開始進行合併以及部屬。合併後，Pull Request 保存了當時的修改歷史記錄以及回饋。可以讓任開發人回頭檢視當初情況。<br><br>
 
 
-### issue tracking <br>
+### issue tracking <br><br>
 
 ![](https://imgur.com/pPOHqDm.png)<br>
 
@@ -119,15 +119,15 @@ GitHub flow則適合項目是"持續發布"類型，缺點是，由於master為�
 所以又發展出了Gitlab flow，Gitlab flow 是 Git flow 与 Github flow 的综合。結合了兩者的優點，有開發環境上的彈性又有單一主分支的方便。
 master分支的分支不夠，于是增加了一個 prodution 分支，專門用來發布版本。<br>
 
-Gitlab flow 分成兩種情況來應付不同的開發流程<br>
+Gitlab flow 分成兩種情況來應付不同的開發流程<br><br>
 * 持續發布
-* 版本發布<br>
+* 版本發布<br><br>
 
 如果為持續發布的專案，建議在多出一個分支，為預發分支pre-production<br>
 
 ![](https://imgur.com/kZhnx7M.png)<br>
 
-* Upstream First<br>
+* 上游優先 Upstream First<br>
 
 Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在一个主分支master，此分支是所有其他分支的上游。所以分支合併的順序很重要，要一次和並且確保通過測試才可以往下游合併，除非是緊急情況，才允許跳過上游直接在下游操作合併。<br>
 
