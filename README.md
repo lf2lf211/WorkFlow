@@ -74,7 +74,6 @@ release分支是從Develop分支分出來的，在預發布結束以後，必須
 
 ## GitHub Flow<br>
 
-![](https://imgur.com/uDjn6I1.png)<br>
 
 使用Github Flow 的前提條件<br>
 適合15-20人左右團隊，在部署上自動化且一天之類需要多次部署的開發。
@@ -83,6 +82,8 @@ release分支是從Develop分支分出來的，在預發布結束以後，必須
 github比git有多兩個服務，一個是fork，另一個是pull request（簡稱PR）,;
 先有一個共有的遠端倉庫(remote repository)，
 然後各自用fork把遠端倉庫fork回到自己的倉庫。開發好後，再利用PR回去共有的遠端倉庫，審核過後merge進master。
+** 示意圖 **
+![](https://imgur.com/uDjn6I1.png)<br>
 
 
 整個 GitHub Flow 是基於分支，它是 Git 的一個核心概念。最主要就是令master 分支時常保持可以部署的狀態。進行新的作業時要從master 分支創建新的分支，分支命名應該具有描述性（如 userInfo、getAllUser......等等），讓其他人清楚知道分支正在進行的工作項目。
@@ -102,21 +103,48 @@ github比git有多兩個服務，一個是fork，另一個是pull request（簡�
 * 在團隊檢核過提交內容後,就可以開始進行合併以及部屬。合併後，Pull Request 保存了當時的修改歷史記錄以及回饋。可以讓任開發人回頭檢視當初情況。<br>
 
 
-## issue tracking <br>
+### issue tracking <br>
 
 ![](https://imgur.com/pPOHqDm.png)<br>
 
-開發時，可以給專案標記issue，還有其他不同標籤，還優化專案。當提交的時候，如果提交訊息中有fix #1 等，可以自動對應到相關編號的issue。
+開發時，可以給專案標記issue，還有其他不同標籤，還優化專案。當提交的時候，如果提交訊息中有fix #1 等，可以自動對應到相關編號的issue。<br>
+
+
+## GitLab Flow
+Git flow的優點是清晰可控，缺點是相對複雜，且需要頻繁切換分支。如果在版本快速迭代的專案中，是幾乎用不到Hotfix 和 Release 分支的，因為合併到master後如果有bug就直接修復且發布下個版本了，如果還使用這兩個分支，需要合併回develop 和 master分支，但實際上開發者很常忘記合併回這兩個主分支。
+
+GitHub flow則適合項目是"持續發布"類型，缺點是，由於master為最新代碼，但是準被發布版本不一定是用最新代碼，或是有固定時間才發布更新的項目，就會有影響(例如:發布ios，時會審核master時，但審核期間如果有新版本推上會造成審核延遲)。如果只有一個master主分支就會不夠用。所以還得另外再建一個新分支來維護。<br>
+
+
+所以又發展出了Gitlab flow，Gitlab flow 是 Git flow 与 Github flow 的综合。結合了兩者的優點，有開發環境上的彈性又有單一主分支的方便。
+master分支的分支不夠，于是增加了一個 prodution 分支，專門用來發布版本。<br>
+
+Gitlab flow 分成兩種情況來應付不同的開發流程<br>
+* 持續發布
+* 版本發布
+如果為持續發布的專案，建議在多出一個分支，為預發分支pre-production<br>
+
+![](https://imgur.com/kZhnx7M.png)<br>
+
+* **Environment Branches  <br>
+
+每個環境(如開發環境,預發環境,測試環境...等)都會有對應的分支。如下圖，開發環境為master分支，預發環境為pre-production分支,生產環境為production
+![](https://imgur.com/5lCbmgm.png)<br>
 
 
 
-Git flow的優點是清晰可控，缺點是相對複雜。需要同時維護兩個長期分支。經常要切換分支，非常煩人。
-GitHub flow則適合項目是"持續發布"類型，缺點是，由於master為最新代碼，但是準被發布版本不一定是用最新代碼，或是有固定時間才發布更新的項目，就會有影響。如果只有一個master主分支就會不夠用。所以還得另外再建一個新分支來維護。
+* **Upstream First<br>
 
-所以又發展出了 Gitlab flow，Gitlab flow 是 Git flow 与 Github flow 的综合。結合了兩者的優點，
-它吸取了两者的优点，既有适应不同开发环境的弹性，又有单一主分支的简单和便利。
+Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在一个主分支master，此分支是所有其他分支的上游。所以分支合併的順序很重要，要一次和並且確保通過測試才可以往下游合併，除非是緊急情況，才允許跳過上游直接在下游操作合併。<br>
 
-GitLab 既支持 Git Flow 的分支策略，也有 GitHub Flow 的 Pull Request（ Merge Request ） 和 issue tracking。
+
+
+由上圖來舉例，如果生產環境(production)發生錯誤，則要建一個新分支修改完後合併到最上游的開發分支(master)，且經過測試，再繼續往預發分支合併(pre-production)，童要經過測試沒問題後才能夠在往下合併到生產環境。
+
+
+
+
+
 
 
 
