@@ -123,29 +123,30 @@ Gitlab flow 分成兩種情況來應付不同的開發流程<br>
 * 持續發布
 * 版本發布<br>
 
-
-
-* **Upstream First<br>
-
 如果為持續發布的專案，建議在多出一個分支，為預發分支pre-production<br>
 
 ![](https://imgur.com/kZhnx7M.png)<br>
 
-每個環境(如開發環境,預發環境,測試環境...等)都會有對應的分支。如下圖，開發環境為master分支，預發環境為pre-production分支,生產環境為production
-![](https://imgur.com/5lCbmgm.png)<br>
+* Upstream First<br>
 
 Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在一个主分支master，此分支是所有其他分支的上游。所以分支合併的順序很重要，要一次和並且確保通過測試才可以往下游合併，除非是緊急情況，才允許跳過上游直接在下游操作合併。<br>
 
+在**持續發布**(Environment Branches & Upstream First)中
+
+每個環境(如開發環境,預發環境,測試環境...等)都會有對應的分支。如下圖，開發環境為master分支，預發環境為pre-production分支,生產環境為production
+![](https://imgur.com/5lCbmgm.png)<br>
 
 
-由上圖來舉例，如果生產環境(production)發生錯誤，則要建一個新分支修改完後合併到最上游的開發分支(master)，且經過測試，再繼續往預發分支合併(pre-production)，童要經過測試沒問題後才能夠在往下合併到生產環境。
+由上圖來舉例，如果生產環境(production)發生錯誤，則要建一個新分支修改完後合併到最上游的開發分支(master)，且經過測試，再繼續往預發分支合併(pre-production)，童要經過測試沒問題後才能夠在往下合併到生產環境。<br>
+
+在**版本發布**(Release Branches & Upstream First)中
 
 
 
+在 GitLab Flow中，對於版本發布的項目，建議每一個穩定的版本都要從master分支拉出來創建一個新分支，比如下圖的2-3-stable、2-4-stable(release分支)。<br>
+根據對應的release分支分支在創建一個修復分支，修補bug後，一樣要照著上游優先規則，先合併到master分支，確認沒問題過後，才能夠合併到release分支，並且要更新版本號。<br>
 
-
-
-
+![](https://imgur.com/TzfGyYH.png)<br>
 
 
 
@@ -157,3 +158,5 @@ Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在�
 参考链接：
 <a href="http://www.ruanyifeng.com/blog/2012/07/git.html">阮一峰-Git分支管理策略</a>、<a href="http://www.ruanyifeng.com/blog/2015/12/git-workflow.html">阮一峰- Git 工作流程</a>、
 <a href="https://medium.com/@trylovetom/%E8%AE%93%E6%88%91%E5%80%91%E4%BE%86%E4%BA%86%E8%A7%A3-github-flow-%E5%90%A7-4144caf1f1bf">MrGG-讓我們來了解 GitHub Flow 吧！</a>
+
+https://drprincess.github.io/2017/12/26/Git%E4%B8%89%E5%A4%A7%E7%89%B9%E8%89%B2%E4%B9%8BWorkFlow(%E5%B7%A5%E4%BD%9C%E6%B5%81)/
