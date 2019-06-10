@@ -69,11 +69,7 @@ release分支是從Develop分支分出來的，在預發布結束以後，必須
 * Git Flow 示意圖<br>
 ![](https://imgur.com/yjhAIgK.jpg)<br>
 
-图中画了 Git Flow 的五种分支，master，develop，feature branchs ,release branchs , hoxfixes，其中 master 和 develop 字体被加粗代表主要分支。master 分支每合并一个分支，无论是 hotfix 还是 release ,都会打一个版本标签。通过箭头可以清楚的看到分支的开始和结束走向，例如 feature 分支从 develop 开始，最终合并回 develop ，hoxfixes 从 master 检出创建，最后合并回 develop 和 master，master 也打上了标签。
 
-
-Git flow的优点是清晰可控，缺点是相对复杂，需要同时维护两个长期分支。大多数工具都将master当作默认分支，可是开发是在develop分支进行的，这导致经常要切换分支，非常烦人。
-更大问题在于，这个模式是基于"版本发布"的，目标是一段时间以后产出一个新版本。但是，很多网站项目是"持续发布"，代码一有变动，就部署一次。这时，master分支和develop分支的差别不大，没必要维护两个长期分支。
 
 
 ## GitHub Flow<br>
@@ -84,7 +80,7 @@ Git flow的优点是清晰可控，缺点是相对复杂，需要同时维护两
 適合15-20人左右團隊，在部署上自動化且一天之類需要多次部署的開發。
 <br><br><br>
 
-github比git有多兩個服務，一個是fork，另一個是pull request（簡稱PR）;
+github比git有多兩個服務，一個是fork，另一個是pull request（簡稱PR）,;
 先有一個共有的遠端倉庫(remote repository)，
 然後各自用fork把遠端倉庫fork回到自己的倉庫。開發好後，再利用PR回去共有的遠端倉庫，審核過後merge進master。
 
@@ -103,11 +99,31 @@ github比git有多兩個服務，一個是fork，另一個是pull request（簡�
 
 * 在討論及回饋中，如果有進需要進修改的內容，在分支中修正它並繼續推送修改。GitHub 會在 Pull Request 頁面顯示新提交以及新的回饋。<br>
 
-
 * 在團隊檢核過提交內容後,就可以開始進行合併以及部屬。合併後，Pull Request 保存了當時的修改歷史記錄以及回饋。可以讓任開發人回頭檢視當初情況。<br>
+
+
+## issue tracking <br>
+開發時，可以給專案標記issue，還有其他不同標籤，還優化專案。當提交的時候，如果提交訊息中有fix #1 等，可以自動對應到相關編號的issue。
+
+
+
+Git flow的優點是清晰可控，缺點是相對複雜。需要同時維護兩個長期分支。經常要切換分支，非常煩人。
+GitHub flow則適合項目是"持續發布"類型，缺點是，由於master為最新代碼，但是準被發布版本不一定是用最新代碼，或是有固定時間才發布更新的項目，就會有影響。如果只有一個master主分支就會不夠用。所以還得另外再建一個新分支來維護。
+
+所以又發展出了 Gitlab flow，Gitlab flow 是 Git flow 与 Github flow 的综合。結合了兩者的優點，
+它吸取了两者的优点，既有适应不同开发环境的弹性，又有单一主分支的简单和便利。
+
+GitLab 既支持 Git Flow 的分支策略，也有 GitHub Flow 的 Pull Request（ Merge Request ） 和 issue tracking。
+
+
+
+
+
+
+
 
 
 
 参考链接：
-<a href="http://www.ruanyifeng.com/blog/2012/07/git.html">阮一峰-Git分支管理策略</a>、<a href="http://www.ruanyifeng.com/blog/2015/12/git-workflow.html">阮一峰- Git 工作流程</a>
+<a href="http://www.ruanyifeng.com/blog/2012/07/git.html">阮一峰-Git分支管理策略</a>、<a href="http://www.ruanyifeng.com/blog/2015/12/git-workflow.html">阮一峰- Git 工作流程</a>、
 <a href="https://medium.com/@trylovetom/%E8%AE%93%E6%88%91%E5%80%91%E4%BE%86%E4%BA%86%E8%A7%A3-github-flow-%E5%90%A7-4144caf1f1bf">MrGG-讓我們來了解 GitHub Flow 吧！</a>
