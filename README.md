@@ -155,6 +155,6 @@ Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在�
 
 
 
-参考链接：
+參考連結：
 <a href="http://www.ruanyifeng.com/blog/2012/07/git.html">阮一峰-Git分支管理策略</a>、<a href="http://www.ruanyifeng.com/blog/2015/12/git-workflow.html">阮一峰- Git 工作流程</a>、
 <a href="https://medium.com/@trylovetom/%E8%AE%93%E6%88%91%E5%80%91%E4%BE%86%E4%BA%86%E8%A7%A3-github-flow-%E5%90%A7-4144caf1f1bf">MrGG-讓我們來了解 GitHub Flow 吧！</a>、<a href="https://drprincess.github.io/2017/12/26/Git%E4%B8%89%E5%A4%A7%E7%89%B9%E8%89%B2%E4%B9%8BWorkFlow(%E5%B7%A5%E4%BD%9C%E6%B5%81)/">DRPrincess-Git三大特色之WorkFlow(工作流)</a>
