@@ -125,21 +125,21 @@ Gitlab flow 分成兩種情況來應付不同的開發流程<br><br>
 
 如果為持續發布的專案，建議在多出一個分支，為預發分支pre-production<br>
 
-![](https://imgur.com/kZhnx7M.png)<br>
+![](https://imgur.com/kZhnx7M.png)<br><br>
 
-* 上游優先 Upstream First<br>
+* 上游優先 Upstream First<br><br>
 
-Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在一个主分支master，此分支是所有其他分支的上游。所以分支合併的順序很重要，要一次和並且確保通過測試才可以往下游合併，除非是緊急情況，才允許跳過上游直接在下游操作合併。<br>
+Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在一个主分支master，此分支是所有其他分支的上游。所以分支合併的順序很重要，要一次和並且確保通過測試才可以往下游合併，除非是緊急情況，才允許跳過上游直接在下游操作合併。<br><br>
 
-* 在**持續發布**(Environment Branches & Upstream First)中
+* 在**持續發布**(Environment Branches & Upstream First)中<br>
 
 每個環境(如開發環境,預發環境,測試環境...等)都會有對應的分支。如下圖，開發環境為master分支，預發環境為pre-production分支,生產環境為production
 ![](https://imgur.com/5lCbmgm.png)<br>
 
 
-由上圖來舉例，如果生產環境(production)發生錯誤，則要建一個新分支修改完後合併到最上游的開發分支(master)，且經過測試，再繼續往預發分支合併(pre-production)，童要經過測試沒問題後才能夠在往下合併到生產環境。<br>
+由上圖來舉例，如果生產環境(production)發生錯誤，則要建一個新分支修改完後合併到最上游的開發分支(master)，且經過測試，再繼續往預發分支合併(pre-production)，童要經過測試沒問題後才能夠在往下合併到生產環境。<br><br>
 
-* 在**版本發布**(Release Branches & Upstream First)中
+* 在**版本發布**(Release Branches & Upstream First)中<br>
 
 
 
@@ -151,12 +151,12 @@ Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在�
 
 ## 總結<br>
 
-Git flow的優點是清晰可控，缺點是相對複雜，且需要頻繁切換分支。如果在版本快速迭代的專案中，是幾乎用不到Hotfix 和 Release 分支的，因為合併到master後如果有bug就直接修復且發布下個版本了，如果還使用這兩個分支，需要合併回develop 和 master分支，但實際上開發者很常忘記合併回這兩個主分支。
+Git flow的優點是清晰可控，缺點是相對複雜，且需要頻繁切換分支。如果在版本快速迭代的專案中，是幾乎用不到Hotfix 和 Release 分支的，因為合併到master後如果有bug就直接修復且發布下個版本了，如果還使用這兩個分支，需要合併回develop 和 master分支，但實際上開發者很常忘記合併回這兩個主分支。<br><br>
 
-GitHub flow則適合項目是"持續發布"類型，缺點是，由於master為最新代碼，但是準被發布版本不一定是用最新代碼，或是有固定時間才發布更新的項目，就會有影響(例如:發布ios，時會審核master時，但審核期間如果有新版本推上會造成審核延遲)。如果只有一個master主分支就會不夠用。所以還得另外再建一個新分支來維護。<br>
+GitHub flow則適合項目是"持續發布"類型，缺點是，由於master為最新代碼，但是準被發布版本不一定是用最新代碼，或是有固定時間才發布更新的項目，就會有影響(例如:發布ios，時會審核master時，但審核期間如果有新版本推上會造成審核延遲)。如果只有一個master主分支就會不夠用。所以還得另外再建一個新分支來維護。<br><br>
 
 所以又發展出了Gitlab flow，Gitlab flow 是 Git flow 与 Github flow 的综合。結合了兩者的優點，有開發環境上的彈性又有單一主分支的方便。
-master分支的分支不夠，于是增加了一個 prodution 分支，專門用來發布版本。<br>
+master分支的分支不夠，于是增加了一個 prodution 分支，專門用來發布版本。<br><br>
 
 這三種工作流程的都有一個共同點，都是"功能驅動式開發"（Feature-driven development）。以需求為開發的起點，先有需求才有以上那些分之，且開發完後該分枝就會被合併到主分支然後刪除。<br><br><br><br><br>
 
