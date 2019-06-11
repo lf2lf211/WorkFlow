@@ -112,9 +112,9 @@ github比git有多兩個服務，一個是fork，另一個是pull request（簡�
 
 
 
------<br>
+-----
 
-
+<br><br>
 
 ## GitLab Flow<br>
 
@@ -158,11 +158,11 @@ GitHub flow則適合項目是"持續發布"類型，缺點是，由於master為�
 所以又發展出了Gitlab flow，Gitlab flow 是 Git flow 与 Github flow 的综合。結合了兩者的優點，有開發環境上的彈性又有單一主分支的方便。
 master分支的分支不夠，于是增加了一個 prodution 分支，專門用來發布版本。<br>
 
-這三種工作流程的都有一個共同點，都是"功能驅動式開發"（Feature-driven development）。以需求為開發的起點，先有需求才有以上那些分之，且開發完後該分枝就會被合併到主分支然後刪除。<br>
+這三種工作流程的都有一個共同點，都是"功能驅動式開發"（Feature-driven development）。以需求為開發的起點，先有需求才有以上那些分之，且開發完後該分枝就會被合併到主分支然後刪除。<br><br><br><br><br>
 
 
 
 
-參考連結：
+參考連結：<br>
 <a href="http://www.ruanyifeng.com/blog/2012/07/git.html">阮一峰-Git分支管理策略</a>、<a href="http://www.ruanyifeng.com/blog/2015/12/git-workflow.html">阮一峰- Git 工作流程</a>、
 <a href="https://medium.com/@trylovetom/%E8%AE%93%E6%88%91%E5%80%91%E4%BE%86%E4%BA%86%E8%A7%A3-github-flow-%E5%90%A7-4144caf1f1bf">MrGG-讓我們來了解 GitHub Flow 吧！</a>、<a href="https://drprincess.github.io/2017/12/26/Git%E4%B8%89%E5%A4%A7%E7%89%B9%E8%89%B2%E4%B9%8BWorkFlow(%E5%B7%A5%E4%BD%9C%E6%B5%81)/">DRPrincess-Git三大特色之WorkFlow(工作流)</a>
