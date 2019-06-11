@@ -112,17 +112,11 @@ github比git有多兩個服務，一個是fork，另一個是pull request（簡�
 
 
 
------
-
-Git flow的優點是清晰可控，缺點是相對複雜，且需要頻繁切換分支。如果在版本快速迭代的專案中，是幾乎用不到Hotfix 和 Release 分支的，因為合併到master後如果有bug就直接修復且發布下個版本了，如果還使用這兩個分支，需要合併回develop 和 master分支，但實際上開發者很常忘記合併回這兩個主分支。
-
-GitHub flow則適合項目是"持續發布"類型，缺點是，由於master為最新代碼，但是準被發布版本不一定是用最新代碼，或是有固定時間才發布更新的項目，就會有影響(例如:發布ios，時會審核master時，但審核期間如果有新版本推上會造成審核延遲)。如果只有一個master主分支就會不夠用。所以還得另外再建一個新分支來維護。<br>
+-----<br>
 
 
-所以又發展出了Gitlab flow，Gitlab flow 是 Git flow 与 Github flow 的综合。結合了兩者的優點，有開發環境上的彈性又有單一主分支的方便。
-master分支的分支不夠，于是增加了一個 prodution 分支，專門用來發布版本。<br>
 
-## GitLab Flow
+## GitLab Flow<br>
 
 
 Gitlab flow 分成兩種情況來應付不同的開發流程<br><br>
@@ -155,11 +149,16 @@ Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在�
 ![](https://imgur.com/TzfGyYH.png)<br>
 
 
-## 總結
-共同點
-本文的三種工作流程，有一個共同點：都採用"功能驅動式開發"（Feature-driven development，簡稱FDD，維基百科）。
-它指的是，需求是開發的起點，先有需求再有功能分支（feature branch）或者補丁分支（hotfix branch）。完成開發後，該分支就合併到主分支，然後被刪除。
+## 總結<br>
 
+Git flow的優點是清晰可控，缺點是相對複雜，且需要頻繁切換分支。如果在版本快速迭代的專案中，是幾乎用不到Hotfix 和 Release 分支的，因為合併到master後如果有bug就直接修復且發布下個版本了，如果還使用這兩個分支，需要合併回develop 和 master分支，但實際上開發者很常忘記合併回這兩個主分支。
+
+GitHub flow則適合項目是"持續發布"類型，缺點是，由於master為最新代碼，但是準被發布版本不一定是用最新代碼，或是有固定時間才發布更新的項目，就會有影響(例如:發布ios，時會審核master時，但審核期間如果有新版本推上會造成審核延遲)。如果只有一個master主分支就會不夠用。所以還得另外再建一個新分支來維護。<br>
+
+所以又發展出了Gitlab flow，Gitlab flow 是 Git flow 与 Github flow 的综合。結合了兩者的優點，有開發環境上的彈性又有單一主分支的方便。
+master分支的分支不夠，于是增加了一個 prodution 分支，專門用來發布版本。<br>
+
+這三種工作流程的都有一個共同點，都是"功能驅動式開發"（Feature-driven development）。以需求為開發的起點，先有需求才有以上那些分之，且開發完後該分枝就會被合併到主分支然後刪除。<br>
 
 
 
