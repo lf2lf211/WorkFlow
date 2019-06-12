@@ -80,9 +80,7 @@ release分支是從Develop分支分出來的，在預發布結束以後，必須
 
 ## GitHub Flow<br>
 
-
-建議使用Github Flow的情況 <br>
-適合15-20人左右團隊，在部署上自動化且一天之類需要多次部署的開發。
+Github Flow是一個適合15-20人左右團隊，在部署上自動化且一天之類需要多次部署的開發(持續發布)。
 <br><br><br>
 
 github比git有多兩個服務，一個是fork，另一個是pull request（簡稱PR），還新增issue tracking用法;
