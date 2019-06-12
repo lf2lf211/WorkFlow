@@ -136,7 +136,7 @@ Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在�
 
 * 在**持續發布**(Environment Branches & Upstream First)中<br>
 
-每個環境(如開發環境,預發環境,測試環境...等)都會有對應的分支。如下圖，開發環境為master分支，預發環境為pre-production分支,生產環境為production
+每個環境(如開發環境,預發環境,測試環境...等)都會有對應的分支。如下圖，開發環境為master分支，預發環境為pre-production分支,生產環境為production<br><br>
 ![](https://imgur.com/5lCbmgm.png)<br>
 
 
