@@ -112,7 +112,7 @@ github比git有多兩個服務，一個是fork，另一個是pull request（簡�
 ![](https://imgur.com/pPOHqDm.png)<br>
 
 開發時，可以給專案標記issue，還有其他不同標籤，還優化專案。當提交的時候，如果提交訊息中有fix #1 等，可以自動對應到相關編號的issue。<br>
-<a href="https://github.com/g0v/dev/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Issue-Tracker-%E5%9B%9E%E5%A0%B1%E5%95%8F%E9%A1%8C%E3%80%81%E6%8F%90%E4%BA%A4%E5%BB%BA%E8%AD%B0">詳細參考<>
+<a href="https://github.com/g0v/dev/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-Issue-Tracker-%E5%9B%9E%E5%A0%B1%E5%95%8F%E9%A1%8C%E3%80%81%E6%8F%90%E4%BA%A4%E5%BB%BA%E8%AD%B0">詳細參考</a>
 
 
 
