@@ -128,14 +128,13 @@ Gitlab flow 分成兩種情況來應付不同的開發流程<br><br>
 
 
 ![](https://imgur.com/kZhnx7M.png)<br><br>
-如果為持續發布的專案，建議在多出一個分支，為預發分支pre-production<br>
 
 * 上游優先 Upstream First<br><br>
 
 Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在一个主分支master，此分支是所有其他分支的上游。所以分支合併的順序很重要，要一次和並且確保通過測試才可以往下游合併，除非是緊急情況，才允許跳過上游直接在下游操作合併。<br><br>
 
 * 在**持續發布**(Environment Branches & Upstream First)中<br>
-
+持續發布的專案，建議在多出一個分支，為預發分支pre-production。<br>
 每個環境(如開發環境,預發環境,測試環境...等)都會有對應的分支。如下圖，開發環境為master分支，預發環境為pre-production分支,生產環境為production<br><br>
 ![](https://imgur.com/5lCbmgm.png)<br>
 
