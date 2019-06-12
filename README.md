@@ -126,9 +126,9 @@ Gitlab flow 分成兩種情況來應付不同的開發流程<br><br>
 * 持續發布
 * 版本發布<br><br>
 
-如果為持續發布的專案，建議在多出一個分支，為預發分支pre-production<br>
 
 ![](https://imgur.com/kZhnx7M.png)<br><br>
+如果為持續發布的專案，建議在多出一個分支，為預發分支pre-production<br>
 
 * 上游優先 Upstream First<br><br>
 
