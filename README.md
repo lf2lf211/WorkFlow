@@ -36,7 +36,7 @@ Git主分支的名字，默認叫做Master。專案一開起就會自動建立�
 ![](https://imgur.com/rw5NlMY.png)<br><br>
 
 **二、開發分支Develop**<br><br>
-此分支用來存放最新開發版本的代碼，是開發過程中代碼中心分支。如要正式對外發布則對主分支merge。<br>
+此分支用來存放最新開發版本的代碼，是開發過程中代碼的中心分支。如要正式對外發布則對主分支merge。<br>
 以develop分支為起點新建feature分支，在feature 分支中進行新功能的開發或者代碼的修正，在合併回Develop分支。<br>
 develop分支維會持續成為開發過程工的最新代碼，以便開發人員創建feature分支進行自己的工作。<br><br>
 
