@@ -162,6 +162,7 @@ GitHub flow則適合項目是"持續發布"類型，缺點是，由於master為�
 所以又發展出了Gitlab flow，Gitlab flow 是 Git flow 与 Github flow 的综合。結合了兩者的優點，有開發環境上的彈性又有單一主分支的方便。
 master分支的分支不夠，于是增加了一個 prodution 分支，專門用來發布版本。<br><br>
 
+
 這三種工作流程的都有一個共同點，都是"功能驅動式開發"（Feature-driven development）。以需求為開發的起點，先有需求才有以上那些分之，且開發完後該分枝就會被合併到主分支然後刪除。<br><br><br><br><br>
 
 
