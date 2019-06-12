@@ -120,6 +120,8 @@ github比git有多兩個服務，一個是fork，另一個是pull request（簡�
 <br><br>
 
 ## GitLab Flow<br>
+* 示意圖<br>
+![](https://imgur.com/kZhnx7M.png)<br><br>
 
 
 Gitlab flow 分成兩種情況來應付不同的開發流程<br><br>
@@ -127,7 +129,6 @@ Gitlab flow 分成兩種情況來應付不同的開發流程<br><br>
 * 版本發布<br><br>
 
 
-![](https://imgur.com/kZhnx7M.png)<br><br>
 
 * 上游優先 Upstream First<br><br>
 
