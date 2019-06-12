@@ -131,7 +131,7 @@ Gitlab flow 分成兩種情況來應付不同的開發流程<br><br>
 
 -----
 
-* 上游優先 Upstream First<br><br>
+## 上游優先 Upstream First<br><br>
 
 Gitlab flow 的最主要原則叫做"上游優先"（upsteam first）:只存在一个主分支master，此分支是所有其他分支的上游。所以分支合併的順序很重要，要一次和並且確保通過測試才可以往下游合併，除非是緊急情況，才允許跳過上游直接在下游操作合併。<br><br>
 
