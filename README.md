@@ -1,4 +1,10 @@
 # git flow vs github flow vs gitlab flow
+
+## 作者
+[lf2lf211](https://github.com/lf2lf211)
+
+-----
+
 本篇將介紹三種最被廣泛使用的WorkFlow(工作流程)
 
 
